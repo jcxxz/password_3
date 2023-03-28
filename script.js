@@ -47,10 +47,7 @@ if(confirmSymbol) {
     console.log(characrterSet);
 }
 
-if(confirmUpper === false 
-    && confirmLower === false
-    && confirmNumber === false
-    && confirmSymbol === false) {
+if(confirmUpper === false && confirmLower === false && confirmNumber === false && confirmSymbol === false) {
         alert("You must select at least one character type");
         writePassword();
     }
@@ -58,13 +55,16 @@ if(confirmUpper === false
     var newPw = "";
     for (var i = 0; i < length; i++) {
         newPw += characrterSet.charAt(Math.floor(Math.random() * characrterSet.length));
-    }
+    
     console.log(newPw);
 
+    var password = newPw;
     var passwordText = document.querySelector("#password");
     passwordText.value = newPw;
+ 
+    return newPw 
+};
 
-    
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
