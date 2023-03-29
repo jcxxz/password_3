@@ -2,6 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 console.log(generateBtn);
 
+generateBtn.addEventListener("click", writePassword);
+
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
@@ -56,16 +58,15 @@ if(!confirmUpper&& !confirmLower && !confirmNumber && !confirmSymbol) {
     var newPw = "";
     for (var i = 0; i < length; i++) {
         newPw += characrterSet.charAt(Math.floor(Math.random() * characrterSet.length));
-    
+    };
     console.log(newPw);
 
     var password = newPw;
     var passwordText = document.querySelector("#password");
     passwordText.value = newPw;
  
-    return passwordText
-};
+    return passwordText;
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
 
