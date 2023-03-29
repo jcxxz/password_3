@@ -26,25 +26,21 @@ var confirmNumber = confirm("Do you want to use numbers?");
 var confirmSymbol = confirm("Do you want to use symbols?");
 var password = "";
 
-if(confirmUpper) {
-    characrterSet += upperCase;
-    console.log(characrterSet);
-}
+if (confirmuppercase) {
+    passwordText = passwordText.concat(uppercase);
+  }
 
-if(confirmLower) {
-    characrterSet += lowerCase;
-    console.log(characrterSet);
-}
+  if (confirmlowercase) {
+    passwordText = passwordText.concat(lowerCase);
+  }
 
-if(confirmNumber) {
-    characrterSet += numbers;
-    console.log(characrterSet);
-}
+  if (confirmnumber) {
+    passwordText = passwordText.concat(number);
+  }
 
-if(confirmSymbol) {
-    characrterSet += symbols;
-    console.log(characrterSet);
-}
+  if (confirmspecialchar) {
+    passwordText = passwordText.concat(specialchar);
+  }
 
 if(confirmUpper === false 
     && confirmLower === false
