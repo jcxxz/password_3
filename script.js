@@ -66,3 +66,5 @@ if(confirmUpper === false
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+ 
+return newPw;
