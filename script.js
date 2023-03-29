@@ -1,8 +1,4 @@
-// Assignment Code
 var generateBtn = document.querySelector("#generate");
-console.log(generateBtn);
-
-generateBtn.addEventListener("click", writePassword);
 
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -16,9 +12,9 @@ var characrterSet = "";
 // Write password to the #password input
 function writePassword() {
     var length = prompt("Choose a length between 8-128 characters");
-    if (length < 7 || length > 35) {
+    if (length < 8 || length > 128) {
       writePassword();
-      alert("Password length is too short or too long, try again");
+      alert("Password length is either too short or too long, try again");
       prompt("Choose a length between 8-128 characters");
     }
     console.log(length);
@@ -50,7 +46,10 @@ if(confirmSymbol) {
     console.log(characrterSet);
 }
 
-if(!confirmUpper&& !confirmLower && !confirmNumber && !confirmSymbol) {
+if(confirmUpper === false 
+    && confirmLower === false
+    && confirmNumber === false
+    && confirmSymbol === false) {
         alert("You must select at least one character type");
         writePassword();
     }
@@ -58,15 +57,12 @@ if(!confirmUpper&& !confirmLower && !confirmNumber && !confirmSymbol) {
     var newPw = "";
     for (var i = 0; i < length; i++) {
         newPw += characrterSet.charAt(Math.floor(Math.random() * characrterSet.length));
-    };
+    }
     console.log(newPw);
 
-    var password = newPw;
     var passwordText = document.querySelector("#password");
     passwordText.value = newPw;
- 
-    return passwordText;
 
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
