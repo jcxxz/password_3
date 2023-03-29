@@ -112,20 +112,23 @@ var confirmSymbol = "";
 
 // Write password to the #password input
 function writePassword() {
-    var length = prompt("Choose a length between 8-128 characters");
-    if (length < 8 || length > 128) {
-      writePassword();
-      alert("Password length is either too short or too long, try again");
-      prompt("Choose a length between 8-128 characters");
-    }
+var length = prompt("How many characters would you like your password to contain?");
+if (length < 8) {
+    alert("Password must be at least 8 characters");
+    writePassword();
+} else if (length > 128) {
+    alert("Password must be less than 128 characters");
+    writePassword();
+} else {
     console.log(length);
 };
 
+var newPw = "";
 var confirmUpper = confirm("Do you want to use uppercase letters?");
 var confirmLower = confirm("Do you want to use lowercase letters?");
 var confirmNumber = confirm("Do you want to use numbers?");
 var confirmSymbol = confirm("Do you want to use symbols?");
-var password = "";
+
 
 if(confirmUpper) {
     characrterSet += upperCase;
@@ -168,5 +171,7 @@ if(confirmUpper === false
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
- 
+
+};
+
 return newPw;
