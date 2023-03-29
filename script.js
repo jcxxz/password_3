@@ -31,19 +31,19 @@ var confirmNumber = confirm("Do you want to use numbers?");
 var confirmSymbol = confirm("Do you want to use symbols?");
 var password = "";
 
-if (confirmuppercase) {
+if (confirmUpper) {
     passwordText = passwordText.concat(uppercase);
   }
 
-  if (confirmlowercase) {
+  if (confirmLower) {
     passwordText = passwordText.concat(lowerCase);
   }
 
-  if (confirmnumber) {
+  if (confirmNumber) {
     passwordText = passwordText.concat(number);
   }
 
-  if (confirmspecialchar) {
+  if (confirmSymbol) {
     passwordText = passwordText.concat(specialchar);
   }
 
