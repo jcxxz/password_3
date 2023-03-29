@@ -56,13 +56,16 @@ if(confirmUpper === false
     }
 
     var newPw = "";
-    for (var i = 0; i < length; i++) {
+    for (var i = 0; i < passwordlength; i++) {
         newPw += characrterSet.charAt(Math.floor(Math.random() * characrterSet.length));
-    }
+    
     console.log(newPw);
 
     var passwordText = document.querySelector("#password");
     passwordText.value = newPw;
+
+    return generatedPassword.join('');
+};
 
 
 // Add event listener to generate button
