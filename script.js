@@ -1,5 +1,10 @@
 var generateBtn = document.querySelector("#generate");
 
+function getRadomValue(array) {
+var randomValue = array[Math.floor(Math.random() * array.length)];
+return randomValue;
+}
+
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var numbers = "0123456789";
