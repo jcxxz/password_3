@@ -36,6 +36,7 @@ THEN the password is either displayed in an alert or written to the page
 -This is the mockup and here is a screenshot of the page.
 
 
+![Screenshot (51)](https://user-images.githubusercontent.com/117127694/228984632-506ec5ab-7d1d-44bc-90c3-8f1bba622fff.png)
 
 
 
