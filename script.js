@@ -133,3 +133,9 @@ function generatePassword() {
     return password;
 }
 
+generateBtn.addEventListener("click", function() {
+    var passwordText = document.querySelector("#password");
+    passwordText.value = generatePassword();
+  });
+  
+
