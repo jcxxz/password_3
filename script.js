@@ -94,8 +94,8 @@ var special = [
 function generatePassword() {
     var passwordLength = prompt("How many characters would you like your password to be? (8-128)");
     if (passwordLength < 8 || passwordLength > 128) {
-        alert("Please choose a number between 8 and 128.");
-        return;
+        prompt("Please choose a number between 8 and 128.");
+        return generatePassword();
     };
 
     var passwordUpperCase = confirm("Would you like to include uppercase letters?");
@@ -141,6 +141,3 @@ generateBtn.addEventListener("click", writePassword);
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-  
-
