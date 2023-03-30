@@ -1,9 +1,5 @@
 // Assignment Code
 
-var generateBtn = document.querySelector("#generate");
-console.log("#generate");
-
-// GLOBAL password variable options
 var lowercase = [
   "a",
   "b",
