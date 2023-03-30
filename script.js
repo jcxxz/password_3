@@ -1,4 +1,6 @@
 // Assignment Code
+var generateBtn = document.querySelector("#generate");
+
 
 var lowercase = [
   "a",
@@ -133,5 +135,12 @@ generateBtn.addEventListener("click", function() {
     var passwordText = document.querySelector("#password");
     passwordText.value = generatePassword();
   });
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
   
 
